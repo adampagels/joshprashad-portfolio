@@ -10,13 +10,33 @@ const IndexPage = ({ data }: { data: any }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      {gallery.map(({ node: photo }: { node: any }) => (
-        <div>
-          <Link to={`/${photo.slug}`}>
-            <img alt={photo.photo.file.url} src={photo.photo.file.url}></img>
-          </Link>
-        </div>
-      ))}
+      <div
+        style={{
+          height: "100%",
+          width: "90%",
+          display: "flex",
+          flexWrap: "wrap",
+          margin: "auto",
+        }}
+      >
+        {gallery.map(({ node: photo }: { node: any }) => (
+          // <Link to={`/${photo.slug}`} style={{
+          //   height: "300px",
+          //   flexGrow: 1,
+          // }}>
+          <img
+            style={{
+              margin: "4px",
+              height: "450px",
+              maxWidth: "920px",
+              flexGrow: 1,
+            }}
+            alt={photo.photo.file.url}
+            src={photo.photo.file.url}
+          ></img>
+          /* </Link> */
+        ))}
+      </div>
       <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </Layout>
