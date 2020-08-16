@@ -27,11 +27,11 @@ const IndexPage = ({ data }: { data: any }) => {
           <img
             style={{
               margin: "4px",
-              height: "450px",
+              height: "500px",
               maxWidth: "920px",
               flexGrow: 1,
             }}
-            alt={photo.photo.file.url}
+            alt={photo.title}
             src={photo.photo.file.url}
           ></img>
           /* </Link> */
