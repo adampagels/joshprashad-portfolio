@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import "../sass/pages/index.scss"
 
 const IndexPage = ({ data }: { data: any }) => {
   const gallery = data.allContentfulHomeGallery.edges
@@ -25,12 +26,7 @@ const IndexPage = ({ data }: { data: any }) => {
           //   flexGrow: 1,
           // }}>
           <img
-            style={{
-              margin: "4px",
-              height: "500px",
-              maxWidth: "920px",
-              flexGrow: 1,
-            }}
+            className="photo"
             alt={photo.title}
             src={photo.photo.file.url}
           ></img>

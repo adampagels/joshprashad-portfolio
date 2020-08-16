@@ -1,0 +1,13 @@
+.photo {
+  margin: 4px;
+  height: 400px;
+  flex-grow: 1;
+
+  @media (min-width: 1200px) {
+    height: 500px;
+  }
+
+  @media (min-width: 1500px) {
+    height: 600px;
+  }
+}
